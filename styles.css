@@ -32,3 +32,11 @@ img {
     margin-right: auto;
 }
 
+form{
+    color: white;
+    text-align: center;
+}
+button{
+    margin-top: 10px;
+}
+
