@@ -1,5 +1,6 @@
 body {
-    background-color:rgb(34, 34, 38);
+
+    background-color:#222226;
 }
 
 h1 {
@@ -8,24 +9,34 @@ h1 {
     text-align: center;
     padding-top: 30px;
     padding-bottom: 30px;
+    animation: mainbodyanimation 1s ease-in forwards;
 
 
 }
+
 h2 {
     
     color: rgb(207, 99, 99);
     text-align: center;
     padding-bottom: 30px;
     font-size: 90%;
+    animation: mainbodyanimation 2s ease-in forwards;
+
 }
 
 p {
     color: white;
     text-align: center;
+    font-size: 20px;
+    padding-top:140px;
+    animation: mainbodyanimation 2s ease-in forwards;
+
 }
 
 img {
     text-align:center;
+    margin-bottom: 100px;
+    animation: mainbodyanimation 4s ease-in backwards;
 
 }
 
@@ -43,8 +54,19 @@ img {
 form{
     color: white;
     text-align: center;
+    animation: mainbodyanimation 4s ease-in forwards;
+
 }
 button{
     margin-top: 10px;
 }
 
+@keyframes mainbodyanimation {
+    from {
+        opacity:0%;
+
+    }
+    to {
+        opacity: 100%;
+    }
+}
