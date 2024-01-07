@@ -51,13 +51,58 @@
                 This currently does nothing
             </h2>
         </div>
-        <form>
-            Summoner Name:<br><input type ="text" name = "name">
+        <form accept-charset="UTF-8">
+            <label for="summonername">Summoner Name</label>
+            <br><input type ="text" id = "summonername" required>
             <br>
-            Tagline: <br> <input type = "text" name = "Tagline">
+            <label for="tagline">Tagline</label>
+            <br> <input type = "text" id = "tagline" required>
             <br>
-            <button type="button" class="btn btn-outline-secondary">Start Search</button>
+            <button type="submit" onClick="submitForm(event)"class="btn btn-outline-secondary">Stat Check</button>
         </form>
+
+        <div class="container">
+            <div id="result" class="result-container">
+
+
+            </div>
+        </div>
+        
+
+
+        <script>
+            function submitForm(event) {
+                event.preventDefault();
+                console.log("Form Submitted!");
+                var summonername = document.getElementById("summonername").value;
+                var tagline = document.getElementById("tagline").value;
+
+                var formData = {
+                    summonername: summonername,
+                    tagline: tagline
+            };
+
+            fetch('http://localhost:5000/get_recent_games', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(formData)
+            })
+                .then(response=>response.json())
+                .then(data=> {
+                    console.log("Data Recieved!");
+                    displayResults(data);
+                })
+                .catch(error=>console.error("Error:", error));
+            }
+
+            function displayResults(data) {
+                // Update the result div with the fetched data
+                var resultDiv = document.getElementById("result");
+                resultDiv.innerHTML = "<pre>" + JSON.stringify(data, null, 2) + "</pre>";
+            }
+        </script>
     </body>
 
 </html>

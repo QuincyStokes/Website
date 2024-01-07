@@ -61,6 +61,20 @@ button{
     margin-top: 10px;
 }
 
+.result-container {
+    background-color: #f8f9fa; /* Set a background color for better visibility */
+    padding: 10px; /* Add padding for better spacing */
+    margin-top: 20px; /* Adjust margin for better separation from the form */
+    border: 1px solid #dee2e6; /* Add a border for better distinction */
+    border-radius: 5px; /* Add border radius for rounded corners */
+    color: #cbd5e0; /* Set text color */
+}
+
+#result {
+    border: 1px solid #ddd;
+    white-space: pre-wrap;
+}
+
 @keyframes mainbodyanimation {
     from {
         opacity:0%;
