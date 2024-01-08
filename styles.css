@@ -78,6 +78,11 @@ button{
     color: #ffffff
 }
 
+navbar-icon {
+    width:30px;
+    height:30px;
+}
+
 @keyframes mainbodyanimation {
     from {
         opacity:0%;
