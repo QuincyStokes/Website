@@ -16,7 +16,7 @@ h1 {
 
 h2 {
     
-    color: rgb(207, 99, 99);
+    color: rgb(49, 115, 60);
     text-align: center;
     padding-bottom: 30px;
     font-size: 90%;
@@ -62,17 +62,20 @@ button{
 }
 
 .result-container {
-    background-color: #f8f9fa; /* Set a background color for better visibility */
+    background-color: #3a3b3c; /* Set a background color for better visibility */
     padding: 10px; /* Add padding for better spacing */
     margin-top: 20px; /* Adjust margin for better separation from the form */
-    border: 1px solid #dee2e6; /* Add a border for better distinction */
+    border: 1px solid white; /* Add a border for better distinction */
     border-radius: 5px; /* Add border radius for rounded corners */
-    color: #cbd5e0; /* Set text color */
+    color: #ffffff; /* Set text color */
 }
 
 #result {
+    background-color:#222226;
     border: 1px solid #ddd;
+    border-radius: 2px;
     white-space: pre-wrap;
+    color: #ffffff
 }
 
 @keyframes mainbodyanimation {
