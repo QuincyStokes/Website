@@ -75,7 +75,9 @@ button{
     border: 1px solid #ddd;
     border-radius: 2px;
     white-space: pre-wrap;
-    color: #ffffff
+    color: #ffffff;
+    animation: mainbodyanimation 4s ease-in forwards;
+
 }
 
 navbar-icon {
